@@ -3,31 +3,83 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
       <title>Student Portfolio</title>
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      <header>
-         <h1 id="name">Jeric Mata</h1>
-         <img src="profile.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">BSCS - 2nd year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
-      <section id="achievements">
-         <h2>Achievements/Certifications</h2>
-         <ul>
-            <li>ITS Java Certification</li>
-            <li>Champions BOTB MMCM Foundation Week 2024</li>
-         </ul>
+      <nav>
+         <div class="left slide-right-normal">
+            <a href="/">My Portfolio</a>
+         </div>
+
+         <div class="right slide-left-normal">
+            <button id="theme-toggle">Switch Theme</button>
+         </div>   
+      </nav>
+      <main>
+      <section class="hero-section slide-bottom-normal">
+         <div class="profile">
+            <img src="profile.webp" alt="Profile-picture">
+         </div>
+         <div class="text">
+            <div class ="name-and-course">
+               <h2>Jeric B. Mata</h2>
+               <p>2nd Year Computer Science Student</p>
+            </div>
+            <div class ="About">
+               <p>Hi my name is Jeric B. Mata, a 2nd year Computer Science student from 
+               Mapúa Malayan Colleges Mindanao. I like to play casual and competitive video games and play my
+               electric guitar. I am a witty guy who enjoys hanging around with my
+               friends.</p>
+            </div>
+         </div>
+         </section>
       </section>
-      <section id="projects">
+      <section class="achievements slide-bottom-normal">
+         <h2>Achievements & Certifications</h2>
+         <div class="text">
+            <p>Here will be the listed achievements and certification that I have acquired throughout 
+               my time in College, the awards and certification mentioned below are both academic and extracurricular.
+            </p>
+         </div>
+         <div class="grid">
+            <article class="display-card slide-right-normal">
+               <img src="Image1.jpg" alt="picture">
+               <h3>ITS Java Certiport Certification</h3>
+               <p>This Certification was given for the Java certification exam taken on November 2025.</p>
+            </article>
+
+            <article class="display-card slide-left-normal">
+               <img src="(2).jpg" alt="Profile-picture">
+               <h3>Battle of the Bands Champions - 9th Foundation Week</h3>
+               <p>Along with my band, "VISCO" the band representing CCIS won during the 9th Foundation Week of MMCM.</p>
+            </article>
+         </div>
+      </section>
+      <section class="projects slide-bottom-normal">
          <h2>Previous Projects</h2>
-         <ul>
-            <li>Kelsey's Homestay</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-         </ul>
+         <div class="text">
+            <p>These are some of the projects that I have worked on during my time in College.
+               The projects listed below are a mix of both individual and group projects.
+            </p>
+         </div>
+         <div class="grid">
+            <article class="display-card slide-right-normal">
+               <img src="Image3.jpg" alt="picture">
+               <h3>Kelsey's Homestay</h3>
+               <p>A resposive website for Booking properties, made by group using a tech stack with react and typescript.</p>
+            </article>
+
+            <article class="display-card slide-left-normal">
+               <img src="Image4.jpg" alt="Profile-picture">
+               <h3>Transaction Logging System</h3>
+               <p>An individual project made purely out of Java using Java swing and filewriter.</p>
+            </article>
       </section>
+      </main>
       <script src="script.js"></script>
    </body>
 </html>
