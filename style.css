@@ -1,29 +1,376 @@
-body {
-	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
-	color: #333;
+
+
+:root{
+	--max-width: 1100px;
+	--bg: #f5f5f5;
+	--text: #333;
+	--accent: #0077cc;
+}
+
+*{
 	margin: 0;
-	padding: 20px;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-header {
-	text-align: center;
-	margin-bottom: 30px;
+html{
+	scroll-behavior:smooth;
 }
 
-#profile-img {
-	width: 150px;
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+}
+
+a {
+	color: var(--accent);
+	font-size: 50px;
+	text-decoration: none;
+}
+
+
+/*Navbar */
+nav {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	height: 80px;
+}
+
+nav .left a{
+	color: var(--text);
+	font-size:22px;
+	font-weight: 600;
+}
+
+
+button{
+	padding:0.5rem 1rem;
+	cursor:pointer;
+	border:0;
+	background:grey;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	color:#fff;
+	border-radius:10px;
+}
+
+.hero-section {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	margin: 50px 0;
+	margin-bottom: 100px;
+	gap: 40px
+}
+
+.hero-section .text {
+	flex: 5;
+	justify-content: left;
+	margin-right: 5px;
+	font-size: 19px;
+}
+
+.hero-section .text h2 {
+	font-size: 60px;
+}
+
+.hero-section .text .About {
+	margin-top: 26px;
+}
+
+.hero-section .profile {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+}
+
+.hero-section .profile img{
+	width: 400px;
 	border-radius: 50%;
 }
 
-button {
-	padding: 10px 20px;
-	margin-top: 10px;
-	cursor: pointer;
+.achievements {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 50px;
+	margin: 50px 0;
+	margin-bottom: 100px;
+}
+
+.achievements h2 {
+	font-size: 50px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.achievements .text{
+	font-size: 19px;
+	margin: 20px 130px;
+}
+
+.grid {
+	margin: 20px 0;
+    display: flex;
+    gap: 45px;
+    width: 100%;
+    max-width: var(--max-width);
+    justify-content: center;
+    flex-wrap: wrap;        /* wrap to next line on narrow screens */
+}
+
+.display-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.664);
+    flex: 1 1 300px;        /* try to fit 3/cards per row; shrink/grow as needed */
+    min-width: 240px;
+    max-width: 650px;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.display-card img {
+	width: 100%;
+	border-radius: 12px 12px 0 0;
+}
+
+.display-card h3 {
+    font-size: 20px;
+	padding: 10px 18px 0 18px;
+	margin-bottom: 12px; 
+    color: var(--text);
+}
+
+.display-card p {
+    font-size: 16px;
+    margin: 0;
+	padding:0 18px 18px 18px;
+    color: #555;
+}
+
+@keyframes slide-bottom-normal {
+	from {
+		transform: translateY(-24px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+.hero-section.slide-bottom-normal {
+	animation: slide-bottom-normal 600ms ease 0s 1 normal both;
+	will-change: transform, opacity;
+}
+
+.achievements.slide-bottom-normal {
+	animation: slide-bottom-normal 600ms ease 0s 1 normal both;
+	will-change: transform, opacity;
+}
+
+.projects.slide-bottom-normal {
+	animation: slide-bottom-normal 600ms ease 0s 1 normal both;
+	will-change: transform, opacity;
+}
+
+@keyframes slide-right-normal {
+  from {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.left.slide-right-normal {
+  animation: slide-right-normal 1s ease 0s 1 normal both;
+  will-change: transform, opacity;
+}
+
+.display-card.slide-right-normal {
+  animation: slide-right-normal 1s ease 0s 1 normal both;
+  will-change: transform, opacity;
+}
+
+@keyframes slide-left-normal {
+  from {
+	transform: translateX(24px);
+	opacity: 0;
+  }
+  to {
+	transform: translateX(0);
+	opacity: 1;
+  }
+}
+
+.right.slide-left-normal { 
+  animation: slide-left-normal 1s ease 0s 1 normal both;
+  will-change: transform, opacity;
+}
+
+.display-card.slide-left-normal { 
+  animation: slide-left-normal 1s ease 0s 1 normal both;
+  will-change: transform, opacity;
+}
+
+/* Dark theme card style */
+body.dark .display-card {
+    background: rgb(70, 70, 70);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.664);
+}
+
+body.dark .display-card h3 {
+	color: #f5f5f5;
+}
+
+body.dark .display-card p {
+	color: #ddd;
+}
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 50px;
+	margin: 50px 0;
+	margin-bottom: 100px;
+}
+
+.projects h2 {
+	font-size: 50px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.achievements .text{
+	font-size: 19px;
+	margin: 20px 130px;
 }
 
 /* Dark Theme */
-body.dark {
-	background-color: #121212;
+body.dark{
+	background-color:rgb(70, 70, 70); 
+	color:#f5f5f5
+}
+
+body.dark nav .left a{
 	color: #f5f5f5;
 }
+
+
+@media (max-width: 945px) {
+	.hero-section .text h2 {
+		font-size: 45px;
+	}
+
+	.hero-section .text p {
+		font-size: 17px;
+	}
+
+	.achievements h2 {
+		font-size: 40px;
+	}
+
+	.achievements .text {
+		font-size: 18px;
+		margin: 0;
+	}
+}
+
+@media (max-width: 849px) {
+	.hero-section .text h2 {
+		font-size: 37px;
+	}
+
+	.hero-section .text p {
+		font-size: 16px;
+	}
+
+	.achievements h2 {
+		font-size: 40px;
+	}
+
+	.achievements .text {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 785px) {
+	.hero-section  {
+		flex-direction: column;
+	}
+
+	.hero-section .profile img {
+		width: 360px;
+	}
+
+	.hero-section .text p {
+		font-size: 16px;
+	}
+
+	.achievements h2 {
+		font-size: 36px;
+	}
+
+	.achievements .text {
+		font-size: 17px;
+	}
+
+	.projects h2 {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 600px) {
+	
+	nav {
+		padding: 0 20px;
+	}
+
+	.hero-section {
+		padding: 0 20px;
+	}
+
+	.hero-section .profile img {
+		width: 300px;
+	}
+
+	.hero-section .text h2 {
+		font-size: 28px;
+	}
+
+	.achievements {
+		padding: 0 20px;
+	}
+
+	.achievements h2 {
+		font-size: 30px;
+	}
+
+	.achievements .text {
+		font-size: 16px;
+	}
+	
+	.projects {
+		padding: 0 20px;
+	}
+
+	.projects h2 {
+		font-size: 30px;
+	}
+
+	.projects .text {
+		font-size: 16px;
+	}
+}
+
