@@ -4,7 +4,15 @@
 	--max-width: 1100px;
 	--bg: #f5f5f5;
 	--text: #333;
-	--accent: #0077cc;
+	--accent: #424242;
+	--nav-bg: transparent;
+	--card-bg: #fff;
+	--card-text: #555;
+	/* button color variables (can be overridden in dark mode) */
+	--button-bg: #0a0a0a; /* default button background */
+	--button-text: #fff; /* default button text */
+	--button-contrast-bg: #fff; /* color to contrast to on click (light mode) */
+	--button-contrast-text: var(--accent);
 }
 
 *{
@@ -20,6 +28,8 @@ html{
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--bg);
+	color: var(--text);
+	transition: background-color 360ms ease, color 360ms ease;
 }
 
 a {
@@ -49,11 +59,19 @@ button{
 	padding:0.5rem 1rem;
 	cursor:pointer;
 	border:0;
-	background:grey;
+	background: var(--button-bg);
 	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
 	color:#fff;
 	border-radius:10px;
+	color: var(--button-text);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.61);
+	transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+}
+
+button:hover{
+	transform: translateY(-3px);
+	box-shadow: 0 12px 24px rgba(0,0,0,0.25);
 }
 
 .hero-section {
@@ -90,6 +108,44 @@ button{
 .hero-section .profile img{
 	width: 400px;
 	border-radius: 50%;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+
+
+/* Button click contrast animation - swaps to contrast colors then back */
+@keyframes button-contrast {
+	0% {
+		background: var(--button-bg);
+		color: var(--button-text);
+	}
+	50% {
+		background: var(--button-contrast-bg);
+		color: var(--button-contrast-text);
+	}
+	100% {
+		background: var(--button-bg);
+		color: var(--button-text);
+	}
+}
+
+.press-contrast {
+	animation: button-contrast 360ms ease;
+}
+
+/* Dark theme: override button variables so the contrast colors are appropriate */
+body.dark{
+	/* set dark theme variables so transitions animate */
+	--bg: #292929;
+	--text: #f5f5f5;
+	--card-bg: rgb(70,70,70);
+	--card-text: #ddd;
+	--button-bg: #ffffff;
+	--button-text: #000000;
+	/* in dark mode, contrast to accent background with white text */
+	--button-contrast-bg: var(--accent);
+	--button-contrast-text: #fff;
+	--nav-bg: rgba(0,0,0,0.12);
 }
 
 .achievements {
@@ -124,7 +180,7 @@ button{
 }
 
 .display-card {
-    background: #fff;
+	background: var(--card-bg);
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.664);
     flex: 1 1 300px;        /* try to fit 3/cards per row; shrink/grow as needed */
@@ -132,6 +188,7 @@ button{
     max-width: 650px;
     text-align: left;
     overflow-wrap: break-word;
+	transition: transform .25s ease, box-shadow .25s ease, background-color .3s ease, color .3s ease;
 }
 
 .display-card img {
@@ -150,7 +207,12 @@ button{
     font-size: 16px;
     margin: 0;
 	padding:0 18px 18px 18px;
-    color: #555;
+	color: var(--card-text);
+}
+
+.display-card:hover{
+	transform: translateY(-20px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.30);
 }
 
 @keyframes slide-bottom-normal {
