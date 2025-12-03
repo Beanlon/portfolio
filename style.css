@@ -348,6 +348,22 @@ body.dark nav .left a{
 	color: #f5f5f5;
 }
 
+.CourseProject{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 50px;
+	margin: 50px 0;
+	margin-bottom: 100px;
+}
+
+.CourseProject h2 {
+	font-size: 50px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
 
 @media (max-width: 945px) {
 	.hero-section .text h2 {
