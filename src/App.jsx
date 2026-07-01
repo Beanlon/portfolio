@@ -20,7 +20,7 @@ function App() {
   })
 
   useEffect(() => {
-    document.title = 'Student Portfolio'
+    document.title = 'Jeric Mata Portfolio'
   }, [])
 
   useEffect(() => {
