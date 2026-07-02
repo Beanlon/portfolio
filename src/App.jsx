@@ -8,7 +8,7 @@ import FeaturedProjectRoute from './sections/projects/FeaturedProjectRoute'
 function App() {
   useEffect(() => {
     document.documentElement.classList.add('dark')
-    document.title = 'Jeric Mata | Portfolio'
+    document.title = 'Jeric B. Mata | Portfolio'
     window.history.scrollRestoration = 'manual'
   }, [])
 
