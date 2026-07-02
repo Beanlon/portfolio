@@ -91,9 +91,21 @@ export default function FeaturedProjectPage({ slug }) {
       </Link>
 
       <header className="mt-6 max-w-3xl">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-orange-400">
-          Featured Project
-        </p>
+        <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <p className="text-xs font-semibold uppercase tracking-widest text-orange-400">
+            Featured Project
+          </p>
+          {project.placed && (
+            <>
+              <span className="text-slate-600 dark:text-slate-600" aria-hidden="true">
+                ·
+              </span>
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+                {project.placed}
+              </p>
+            </>
+          )}
+        </div>
         <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">{project.title}</h1>
         {project.subtitle && (
           <p className="mt-3 text-base font-medium text-orange-500 md:text-lg dark:text-orange-400">{project.subtitle}</p>

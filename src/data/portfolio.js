@@ -74,7 +74,7 @@ export const featuredProjects = [
     href: '',
     repository: 'https://github.com/Beanlon/TBhon',
     backendRepository: 'https://github.com/Beanlon/TBhon-Backend',
-    figma: '',
+    figma: 'https://www.figma.com/design/brPxvhfu0E5MfOvL9EyzN7/TBhon-System-Wireframes?m=auto&t=0f68Z8V5r2PoyanT-1',
     previewImages: ['/featured/Tbhon/Screen1.png', '/featured/Tbhon/Screen2.png'],
     images: [
       '/featured/Tbhon/Screen1.png',
@@ -86,6 +86,7 @@ export const featuredProjects = [
       '/featured/Tbhon/Screen7.png',
     ],
     title: 'TBHON',
+    placed: 'June 2026',
     subtitle: 'Staff-Operated TB Screening Support at the Edge',
     shortDescription:
       'Mobile TB pre-screening for community health booths in Davao City—symptom checklists, cough audio, sputum imaging, and optional IoT capture, with staff review before triage results.',
@@ -149,9 +150,11 @@ export const featuredProjects = [
     download: '',
     href: 'https://www.kelseyshomestay.com/',
     repository: 'https://github.com/kelsey-developers',
+    figma: 'https://www.figma.com/design/AkHkHoBuvtUg6d6CLAEk8L/Kelsey-s-Homestay?m=auto&t=0f68Z8V5r2PoyanT-1',
     previewImages: ['/featured/Kelsey/Image3.jpg'],
     images: ['/featured/Kelsey/Image3.jpg'],
     title: "Kelsey's Homestay",
+    placed: 'March 2026',
     subtitle: 'Vacation rental & booking platform for Davao City',
     shortDescription:
       'A responsive group project for browsing homestay listings, viewing property details, and booking stays through a clean, mobile-friendly web experience.',

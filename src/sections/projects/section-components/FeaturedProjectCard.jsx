@@ -49,6 +49,7 @@ export default function FeaturedProjectCard({
   subtitle,
   shortDescription,
   description,
+  placed,
   previewImages,
   images = [],
   download,
@@ -63,8 +64,14 @@ export default function FeaturedProjectCard({
 
   return (
     <article className="featured-showcase relative overflow-hidden rounded-2xl border border-slate-200/80 shadow-sm dark:border-white/10">
+      {placed && (
+        <p className="absolute left-6 top-6 z-30 text-xs font-semibold uppercase tracking-widest text-orange-500 dark:text-orange-400 sm:left-8 sm:top-8 sm:text-sm">
+          {placed}
+        </p>
+      )}
+
       <div className="relative grid gap-8 p-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:gap-6 lg:p-8">
-        <div className="relative z-20 min-w-0">
+        <div className={`relative z-20 min-w-0 ${placed ? 'pt-6 sm:pt-7' : ''}`}>
           {detailPath ? (
             <Link to={detailPath} className="group inline-block no-underline">
               <h3 className="text-4xl font-bold tracking-tight text-white transition-colors group-hover:text-orange-300 sm:text-5xl">
