@@ -17,8 +17,8 @@ export default function ProjectCard({
 
   const cardClasses = [
     'group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200/80 bg-white text-left shadow-sm',
-    'transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-200/60 hover:shadow-md hover:shadow-indigo-500/10',
-    'dark:border-white/10 dark:bg-slate-800/80 dark:hover:border-indigo-500/30',
+    'transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-200/60 hover:shadow-md hover:shadow-orange-500/10',
+    'dark:border-white/10 dark:bg-slate-800/80 dark:hover:border-orange-500/30',
     'no-underline',
   ].join(' ')
 
@@ -44,14 +44,14 @@ export default function ProjectCard({
           <h3 className="line-clamp-2 text-base font-semibold leading-snug text-slate-900 dark:text-white">
             {title}
           </h3>
-          <span className="mt-0.5 shrink-0 text-indigo-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-indigo-400">
+          <span className="mt-0.5 shrink-0 text-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-orange-400">
             <ExternalIcon />
           </span>
         </div>
         <p className="line-clamp-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
           {description}
         </p>
-        <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-indigo-600 dark:text-indigo-400">
+        <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-orange-600 dark:text-orange-400">
           View project
           <ExternalIcon />
         </span>

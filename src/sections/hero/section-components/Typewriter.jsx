@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 
-const NAME = 'Jeric B. Mata'
-const TYPING_MS = 95
-const DELETING_MS = 55
-const PAUSE_TYPED_MS = 2200
-const PAUSE_DELETED_MS = 600
-
-export default function TypewriterName() {
+export default function Typewriter({
+  text,
+  textClassName = '',
+  cursorClassName = 'typewriter-cursor',
+  typingMs = 95,
+  deletingMs = 55,
+  pauseTypedMs = 2200,
+  pauseDeletedMs = 700,
+}) {
   const [displayed, setDisplayed] = useState('')
   const [reducedMotion, setReducedMotion] = useState(false)
 
@@ -20,7 +22,7 @@ export default function TypewriterName() {
 
   useEffect(() => {
     if (reducedMotion) {
-      setDisplayed(NAME)
+      setDisplayed(text)
       return
     }
 
@@ -38,29 +40,29 @@ export default function TypewriterName() {
 
       if (!deleting) {
         index += 1
-        setDisplayed(NAME.slice(0, index))
+        setDisplayed(text.slice(0, index))
 
-        if (index >= NAME.length) {
+        if (index >= text.length) {
           schedule(() => {
             deleting = true
             tick()
-          }, PAUSE_TYPED_MS)
+          }, pauseTypedMs)
         } else {
-          schedule(tick, TYPING_MS)
+          schedule(tick, typingMs)
         }
         return
       }
 
       index -= 1
-      setDisplayed(NAME.slice(0, index))
+      setDisplayed(text.slice(0, index))
 
       if (index <= 0) {
         schedule(() => {
           deleting = false
           tick()
-        }, PAUSE_DELETED_MS)
+        }, pauseDeletedMs)
       } else {
-        schedule(tick, DELETING_MS)
+        schedule(tick, deletingMs)
       }
     }
 
@@ -70,22 +72,17 @@ export default function TypewriterName() {
       cancelled = true
       clearTimeout(timeoutId)
     }
-  }, [reducedMotion])
+  }, [reducedMotion, text, typingMs, deletingMs, pauseTypedMs, pauseDeletedMs])
 
   if (reducedMotion) {
-    return <span className="gradient-text">{NAME}</span>
+    return <span className={textClassName}>{text}</span>
   }
 
   return (
-    <span className="relative inline-block">
-      <span aria-hidden="true" className="invisible">
-        {NAME}
-      </span>
-      <span className="absolute left-0 top-0 whitespace-nowrap">
-        <span className="gradient-text">{displayed}</span>
-        <span className="typewriter-cursor" aria-hidden="true">
-          |
-        </span>
+    <span className="inline">
+      <span className={textClassName}>{displayed}</span>
+      <span className={cursorClassName} aria-hidden="true">
+        |
       </span>
     </span>
   )

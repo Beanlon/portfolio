@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { formatWordCount } from '../utils/countWords'
+import { formatWordCount } from '../../../utils/countWords'
 
 function CloseIcon() {
   return (
@@ -67,7 +67,7 @@ export default function AwardModal({
 
         <div className="flex min-h-0 flex-1 flex-col p-6 sm:p-8 md:w-1/2">
           {type && (
-            <span className="mb-3 inline-block w-fit rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300">
+            <span className="mb-3 inline-block w-fit rounded-full bg-orange-50 px-2.5 py-0.5 text-xs font-medium text-orange-700 dark:bg-orange-500/10 dark:text-orange-300">
               {type}
             </span>
           )}

@@ -1,4 +1,3 @@
-import ContactMe from './ContactMe'
 import { contactEmails, github, linkedIn } from '../data/contact'
 
 function EnvelopeIcon() {
@@ -28,7 +27,7 @@ function LinkedInIcon() {
 
 const footerLinkClasses = [
   'inline-flex items-center gap-2.5 text-sm text-slate-600 no-underline transition-colors',
-  'hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400',
+  'hover:text-orange-600 dark:text-slate-300 dark:hover:text-orange-400',
 ].join(' ')
 
 const footerHeadingClasses = [
@@ -41,13 +40,6 @@ export default function Footer() {
 
   return (
     <footer>
-      <section
-        id="contact"
-        className="contact-section-bg scroll-mt-28 px-5 py-16 md:px-8 md:py-20"
-      >
-        <ContactMe />
-      </section>
-
       <div className="site-footer-bar border-t border-slate-200/80 dark:border-white/10">
         <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-14">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">

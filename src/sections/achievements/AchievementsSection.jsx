@@ -1,5 +1,5 @@
-import AchievementCard from './AchievementCard'
-import ScrollReveal from './ScrollReveal'
+import AchievementCard from './section-components/AchievementCard'
+import ScrollReveal from '../../components/ScrollReveal'
 
 export default function AchievementsSection({ title, description, items }) {
   return (
@@ -20,7 +20,7 @@ export default function AchievementsSection({ title, description, items }) {
         </p>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {items.map((item, index) => (
           <ScrollReveal key={item.title} className="h-full" delay={index * 60}>
             <AchievementCard

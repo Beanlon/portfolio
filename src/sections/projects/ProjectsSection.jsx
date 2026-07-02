@@ -1,6 +1,6 @@
-import FeaturedProjectCard from './FeaturedProjectCard'
-import ProjectCard from './ProjectCard'
-import ScrollReveal from './ScrollReveal'
+import FeaturedProjectCard from './section-components/FeaturedProjectCard'
+import ProjectCard from './section-components/ProjectCard'
+import ScrollReveal from '../../components/ScrollReveal'
 
 export default function ProjectsSection({ title, description, featuredItems, items }) {
   return (
@@ -28,15 +28,8 @@ export default function ProjectsSection({ title, description, featuredItems, ite
             </ScrollReveal>
             <div className="flex flex-col gap-6">
               {featuredItems.map((item, index) => (
-                <ScrollReveal key={item.title} delay={index * 100}>
-                  <FeaturedProjectCard
-                    images={item.images}
-                    title={item.title}
-                    description={item.description}
-                    href={item.href}
-                    repository={item.repository}
-                    download={item.download}
-                  />
+                <ScrollReveal key={item.slug ?? item.title} delay={index * 100}>
+                  <FeaturedProjectCard {...item} />
                 </ScrollReveal>
               ))}
             </div>

@@ -46,30 +46,7 @@ export const achievements = [
     description:
       'Earned the IT Specialist Java certification through Certiport, validating foundational knowledge of Java programming, object-oriented concepts, and practical software development skills.',
   },
-  {
-    image: '/Certificate/Fallacies.jpg',
-    title: 'Think Again IV: How to Avoid Fallacies',
-    type: 'Online Course',
-    placed: '2025',
-    description:
-      'Completed Think Again IV: How to Avoid Fallacies, focusing on identifying flawed reasoning, evaluating arguments more carefully, and communicating ideas with stronger logical clarity.',
-  },
-  {
-    image: '/Certificate/Gender_Equality.jpg',
-    title: 'Gender Equality',
-    type: 'Online Course',
-    placed: '2025',
-    description:
-      'Completed an online course on gender equality covering inclusive perspectives, social awareness, and the importance of equitable practices in education, workplaces, and community settings.',
-  },
-  {
-    image: '/Certificate/Ethics.jpg',
-    title: 'Ethics, Culture, and Global Perspectives',
-    type: 'Online Course',
-    placed: '2025',
-    description:
-      'Finished Ethics, Culture, and Global Perspectives, exploring ethical decision-making, cultural awareness, and how global viewpoints shape responsible behavior in professional environments.',
-  },
+
   {
     image: '/Certificate/Input_And_Interaction.jpg',
     title: 'Input and Interaction',
@@ -90,9 +67,15 @@ export const achievements = [
 
 export const featuredProjects = [
   {
-    download: 'https://expo.dev/accounts/mika_mika/projects/tbhon/builds/4c8b2666-bb10-40ad-a70b-8ab5ab5c52d5?fbclid=IwY2xjawSyL2lleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEedgF9ps1FJE0E161O_0C-jnHJbHS5MohW-uJuURufPmYiDywOKAeCh50_7Qk_aem_Adnp5WEqSghOhLp3MA1k2Q',
+    slug: 'tbhon',
+    device: 'mobile',
+    download:
+      'https://expo.dev/accounts/mika_mika/projects/tbhon/builds/4c8b2666-bb10-40ad-a70b-8ab5ab5c52d5?fbclid=IwY2xjawSyL2lleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEedgF9ps1FJE0E161O_0C-jnHJbHS5MohW-uJuURufPmYiDywOKAeCh50_7Qk_aem_Adnp5WEqSghOhLp3MA1k2Q',
     href: '',
     repository: 'https://github.com/Beanlon/TBhon',
+    backendRepository: 'https://github.com/Beanlon/TBhon-Backend',
+    figma: '',
+    previewImages: ['/featured/Tbhon/Screen1.png', '/featured/Tbhon/Screen2.png'],
     images: [
       '/featured/Tbhon/Screen1.png',
       '/featured/Tbhon/Screen2.png',
@@ -102,20 +85,90 @@ export const featuredProjects = [
       '/featured/Tbhon/Screen6.png',
       '/featured/Tbhon/Screen7.png',
     ],
-    title: 'TBhon',
+    title: 'TBHON',
+    subtitle: 'Staff-Operated TB Screening Support at the Edge',
+    shortDescription:
+      'Mobile TB pre-screening for community health booths in Davao City—symptom checklists, cough audio, sputum imaging, and optional IoT capture, with staff review before triage results.',
     description:
-      'TBhon is a cross-platform mobile application used as a preliminary support screening tool for screening patients for tuberculosis it uses AI with machine learning capabilities to automatically detect the likely percentage of risk that someone is likely to have tuberculosis. It uses an ESP-32 microcontroller with a camera and microphone module for recording audio and capturing images for microscopic sputum smears. It is developerd using React Native so that it can handle both Android and iOS devices and DigitalOcean to host the backend, database and the AI machine learning module.',
+      'TBhon is a cross-platform mobile application used as a preliminary support screening tool for screening patients for tuberculosis. It uses AI with machine learning capabilities to automatically detect the likely percentage of risk that someone is likely to have tuberculosis. It uses an ESP-32 microcontroller with a camera and microphone module for recording audio and capturing images for microscopic sputum smears. It is developed using React Native so that it can handle both Android and iOS devices and DigitalOcean to host the backend, database, and the AI machine learning module.',
+    techStack: [
+      {
+        category: 'Mobile App',
+        repo: 'TBhon',
+        items: [
+          'React Native',
+          'Expo',
+          'TypeScript',
+          'Expo Router',
+          'NativeWind',
+          'React Navigation',
+          'Expo Camera',
+          'Expo AV',
+          'BLE (react-native-ble-plx)',
+        ],
+      },
+      {
+        category: 'Backend API',
+        repo: 'Tbhon-Backend',
+        items: [
+          'Node.js',
+          'Express',
+          'TypeScript',
+          'Prisma',
+          'MariaDB',
+          'JWT',
+          'Swagger',
+          'Multer',
+          'Nodemailer',
+        ],
+      },
+      {
+        category: 'ML & Inference',
+        repo: 'TBhon / ml',
+        items: [
+          'Python',
+          'FastAPI',
+          'Uvicorn',
+          'PyTorch',
+          'torchvision',
+          'scikit-learn',
+          'NumPy',
+          'SciPy',
+        ],
+      },
+      {
+        category: 'Infrastructure & IoT',
+        repo: 'TBhon / infra',
+        items: ['DigitalOcean', 'Cloudflare Tunnel', 'ESP32', 'Camera Module', 'Microphone Module'],
+      },
+    ],
   },
   {
+    slug: 'kelseys-homestay',
+    device: 'desktop',
     download: '',
     href: 'https://www.kelseyshomestay.com/',
     repository: 'https://github.com/kelsey-developers',
+    previewImages: ['/featured/Kelsey/Image3.jpg'],
     images: ['/featured/Kelsey/Image3.jpg'],
     title: "Kelsey's Homestay",
+    subtitle: 'Vacation rental & booking platform for Davao City',
+    shortDescription:
+      'A responsive group project for browsing homestay listings, viewing property details, and booking stays through a clean, mobile-friendly web experience.',
     description:
       "Kelsey's Homestay is a responsive vacation rental and booking platform for properties in Davao City, built as a group project with React and TypeScript. It lets visitors browse listings, view property details, and book stays through a clean, mobile-friendly interface focused on a smooth booking experience for travelers.",
+    techStack: [
+      {
+        category: 'Frontend',
+        items: ['React', 'TypeScript', 'Tailwind CSS'],
+      },
+    ],
   },
 ]
+
+export function getFeaturedProjectBySlug(slug) {
+  return featuredProjects.find((project) => project.slug === slug)
+}
 
 export const projects = [
   {
