@@ -31,12 +31,20 @@ export const achievements = [
       Based on my experience I realized that going beyond and exceeding expectations can always give you great opportunities and gets you to where you want to be. However it doesn't come without challenges so persevering and having patience is also key to become successful in what you want to do. Thinking ahead and surpassing your limits will always be an important part to innovation. Also understanding your team's strengths and weaknesess, their capabilities and their limits will also be important in better collaboration and communication which was vital for our achievements. Knowing how to manage these factors and encorporating these thoughts will change your overall mentality into achieving great things.`,
   },
   {
+    image: '/Certificate/Innovision-2026-CCIS-Participation.jpg',
+    title: 'CCIS Innovision 2026 Certificate of Participation',
+    type: 'Certification',
+    placed: 'June 2026',
+    description:
+      'Recognized for actively participating in CCIS Innovision 2026: College Research, Innovation, and Project Colloquium, held on June 20, 2026 at the RG Birrey Building, Ma-a, Davao City — celebrating academic excellence, innovation, and research.',
+  },
+  {
     image: '/Certificate/InnoVision.jpg',
-    title: 'Innovision 2026 Certificate of Participation',
+    title: 'Innovision 2026 Certificate of Participation (Eventflow)',
     type: 'Certification',
     placed: '2025',
     description:
-      'Participated in Innovision 2026, a technology and innovation showcase event organized by the College of Information Technology, University of the Philippines Visayas Tacloban. This event provided a platform to showcase innovative projects and ideas related to information technology and related fields.',
+      'Participated in Innovision 2026, Eventflow certificate is the basis of the attendance, Eventflow is an attendance tracking web app made by fellow students. Using facial recognition technology for easier attendance recording.',
   },
   {
     image: '/Certificate/IT-Specialist.jpg',
